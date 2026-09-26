@@ -1,35 +1,150 @@
-body { 
-    font-family: Verdana, sans-serif; 
+/* --- RESET & BASIC SETUP --- */
+* {
+    box-sizing: border-box;
 }
 
-h1 { 
-    color: navy; 
-    text-align: center; 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    line-height: 1.6;
 }
 
-#judul { 
-    color: green; 
-    text-align: center; 
+/* --- TYPOGRAPHY --- */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
 }
 
-p.bio { 
-    color: #444; 
-    font-style: italic; 
+h3 {
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
+/* --- NAVIGATION LINKS (BUTTON STYLE) --- */
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+/* --- PROFIL FLEXBOX --- */
 .kontainer-profil {
     display: flex;
-    gap: 16px;
+    gap: 25px;
     align-items: center;
-    flex-wrap: wrap;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #e9ecef;
 }
 
+.kontainer-profil img {
+    border-radius: 50%; /* Membuat foto jadi bulat */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+
+.bio {
+    color: #555;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/* --- TABLE STYLING --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+table, th, td {
+    border: 1px solid #dee2e6;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* --- FORM & INPUT STYLING --- */
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+/* --- RESPONSIVE MEDIA QUERY --- */
 @media (max-width: 600px) {
+    body {
+        margin: 15px;
+        padding: 20px;
+    }
+    
     .kontainer-profil {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
-
+    
     table {
         font-size: 12px;
     }

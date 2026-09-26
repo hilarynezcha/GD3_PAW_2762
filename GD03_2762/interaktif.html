@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="profil.html">Ke Halaman Profil</a> | 
-    <a href="form.html">Ke Halaman Form</a>
+   <a href="profil.html" onclick="return confirm('Yakin ingin kembali ke Profil?')">Ke Halaman Profil</a>
+    <a href="form.html" onclick="return confirm('Yakin ingin pindah ke Halaman Form?')">Ke Halaman Form</a>
 
     <h1 id="judulHalaman">Halaman Interaktif Saya</h1>
 
@@ -17,6 +17,11 @@
     <br><br>
     <input type="text" id="inputNama" placeholder="Ketik nama kamu...">
     <button onclick="tampilkanNama()">Tampilkan</button>
+
+    <hr>
+    <h3>Kalkulator Kuadrat</h3>
+    <input type="number" id="inputAngka" placeholder="Masukkan angka...">
+    <button onclick="hitungKuadrat()">Hitung Kuadrat</button>
 </body>
 
 <script>
@@ -42,6 +47,16 @@
                  alert("Halo, " + nama + "!");
             }
     }
+
+    function hitungKuadrat() {
+        const angka = document.getElementById("inputAngka").value;
+            if (angka === "") {
+                alert("Silakan masukkan angka terlebih dahulu!");
+            } else {
+                const hasil = angka * angka;
+                alert("Hasil kuadrat dari " + angka + " adalah " + hasil);
+            }
+    }   
 </script>
 
 </html>
