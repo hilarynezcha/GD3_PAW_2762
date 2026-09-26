@@ -13,6 +13,10 @@
 
     <p id="teks">Teks ini bisa berubah!</p>
     <button onclick="ubahBiru()">Ubah ke Biru</button>
+
+    <br><br>
+    <input type="text" id="inputNama" placeholder="Ketik nama kamu...">
+    <button onclick="tampilkanNama()">Tampilkan</button>
 </body>
 
 <script>
@@ -28,6 +32,15 @@
     function ubahBiru() {
         const elemenTeks = document.getElementById("teks");
         elemenTeks.style.color = "blue";
+        }
+
+    function tampilkanNama() {
+        const nama = document.getElementById("inputNama").value;
+            if (nama === "") {
+                alert("Silakan isi nama dulu.");
+            } else {
+                 alert("Halo, " + nama + "!");
+            }
     }
 </script>
 
