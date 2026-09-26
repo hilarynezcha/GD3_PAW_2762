@@ -11,6 +11,8 @@
 
     <h1 id="judulHalaman">Halaman Interaktif Saya</h1>
 
+    <p id="teks">Teks ini bisa berubah!</p>
+    <button onclick="ubahBiru()">Ubah ke Biru</button>
 </body>
 
 <script>
@@ -22,6 +24,11 @@
             return "Halo, " + nama + "!";
         }
         console.log(sapa("Nezcha"));
+
+    function ubahBiru() {
+        const elemenTeks = document.getElementById("teks");
+        elemenTeks.style.color = "blue";
+    }
 </script>
 
 </html>
